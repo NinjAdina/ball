@@ -25,12 +25,12 @@ var ball = {
   },
 
   move: function () {
-    this.x += this.speed; // this line is the same as: this.x = this.x + 1;
+    this.y += this.speed; // this line is the same as: this.x = this.x + this.speed;
   },
 
   checkForBounce: function () {
-    if (this.x > width - this.size / 2) this.bounce();
-    if (this.x < this.size / 2) this.bounce();
+    if (this.y > height - this.size / 2) this.bounce();
+    if (this.y < this.size / 2) this.bounce();
   },
 
   bounce: function () {
